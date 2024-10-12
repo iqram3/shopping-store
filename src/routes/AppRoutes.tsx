@@ -12,7 +12,7 @@ const ProductDetailsPage = lazy(() => import("../pages/ProductDetailsPage"));
 
 const AppRoutes = () => {
   return (
-    <Router basename="/shopping-store">
+    <Router>
       <Suspense fallback={<div className="text-center m-32">Component Loading...</div>}>
         <ToastContainer />
         <Header />
