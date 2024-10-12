@@ -1,6 +1,6 @@
 # shopping-store
 
-This project is a full-fledged **shopping-store** built using **React**, **Redux**, **TypeScript**, and **Tailwind CSS**. It provides functionality for users to browse products, add items to their cart.
+This project is a full-fledged **shopping-store** built using **React**, **Redux**, **TypeScript**, and **Tailwind CSS**. It provides functionality for users to browse products, add items to their cart.Its compeletly accessible and responsive for every screen size and devices.
 
 ## Table of Contents
 
