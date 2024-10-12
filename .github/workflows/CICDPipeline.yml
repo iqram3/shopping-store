@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Already set to node20
+          node-version: '20'  # Specify the Node.js version to use
 
       - name: Cache npm dependencies
         uses: actions/cache@v3
@@ -33,7 +33,7 @@ jobs:
         run: npm install --save-dev @babel/plugin-proposal-private-property-in-object
 
       - name: Build Project
-        run: npm run build
+        run: npm run build  # Ensure this command is working correctly
 
       - name: Configure Git
         run: |
