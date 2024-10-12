@@ -1,46 +1,96 @@
-# Getting Started with Create React App
+# shopping-store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a full-fledged **shopping-store** built using **React**, **Redux**, **TypeScript**, and **Tailwind CSS**. It provides functionality for users to browse products, add items to their cart.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [shopping-store](#shopping-store)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Clone the Repository](#clone-the-repository)
+    - [Project Structure](#project-structure)
+    - [Technologies Used](#technologies-used)
+    - [License](#license)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **User Authentication**: Users can register, log in, and log out securely.
+- **Product Browsing**: View a list of products with detailed descriptions.
+- **Shopping Cart**: Add products to a cart and proceed to checkout.
+- **Order Management**: View order history and track the status of purchases.
+- **Role-Based Access Control (RBAC)**: Different access levels for users (e.g., admins, customers).
+- **Responsive Design**: Fully responsive UI using Tailwind CSS.
+- **Redux State Management**: Centralized state management for handling product data, user authentication, and shopping cart functionality.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+To get started with this project, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Make sure you have the following installed on your local machine:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Node.js](https://nodejs.org/en/) (version 14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-The build is minified and the filenames include the hashes.\
+### Clone the Repository
+
+```bash
+git clone https://github.com/iqram3/shopping-store.git
+cd shopping-store
+
+npm install
+# OR
+yarn install
+
+ ### Available Scripts
+    
+In the project directory, you can run the following scripts:
+
+npm start
+Runs the app in development mode.
+Open http://localhost:3000 to view it in the browser.
+
+The page will reload when changes are made, and you will see any lint errors in the console.
+
+npm test
+Launches the test runner in interactive watch mode.
+Utilize this to run unit tests and ensure app functionality.
+For more information, refer to the running tests documentation.
+
+npm run build
+Builds the app for production in the build folder.
+It bundles React in production mode and optimizes the build for the best performance.
+
 Your app is ready to be deployed!
+See deployment documentation for more details.
+```
+### Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+├── public              # Static files
+├── src
+│   ├── components      # Reusable UI components
+│   ├── pages           # Main pages (Home, ProductDetail, Cart)
+│   ├── redux           # Redux store, slices, and actions
+│   ├── routes          # Routing for the Application
 
-### `npm run eject`
+### Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ - **React:** A JavaScript library for building user interfaces.
+ - **Redux:** A predictable state container for JavaScript apps.
+ - **TypeScript:** A statically typed superset of JavaScript.
+ - **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+ - **Axios:** A promise-based HTTP client for the browser and Node.js.
+ - **react-router-dom:** Declarative routing for React applications.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### License
+This project is licensed under the MIT License. Feel free to use and modify it as per your needs.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This updated `README.md` now includes:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Project Description**: An overview of the project and its features.
+- **Getting Started**: Instructions for cloning the project, installing dependencies, and setting up the environment variables.
+- **Technologies Used**: A list of the key tools and frameworks.
+- **License**: Information about the project's license.
