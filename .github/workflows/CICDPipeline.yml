@@ -11,15 +11,15 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@latest
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@latest
         with:
-          node-version: '20'  # Already set to node20
+          node-version: '20'
 
       - name: Cache npm dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@latest
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -29,8 +29,24 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Clear npm cache
+        run: npm cache clean --force
+
       - name: Add Missing Babel Plugin
         run: npm install --save-dev @babel/plugin-proposal-private-property-in-object
+
+      # Debugging steps
+      - name: Debugging: List environment variables
+        run: printenv
+
+      - name: Debugging: Check Node.js version
+        run: node -v
+
+      - name: Debugging: Check npm version
+        run: npm -v
+
+      - name: Debugging: List installed npm packages
+        run: npm list
 
       - name: Build Project
         run: npm run build
