@@ -16,11 +16,9 @@ This project is a full-fledged **shopping-store** built using **React**, **Redux
 
 ## Features
 
-- **User Authentication**: Users can register, log in, and log out securely.
 - **Product Browsing**: View a list of products with detailed descriptions.
 - **Shopping Cart**: Add products to a cart and proceed to checkout.
 - **Order Management**: View order history and track the status of purchases.
-- **Role-Based Access Control (RBAC)**: Different access levels for users (e.g., admins, customers).
 - **Responsive Design**: Fully responsive UI using Tailwind CSS.
 - **Redux State Management**: Centralized state management for handling product data, user authentication, and shopping cart functionality.
 
