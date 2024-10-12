@@ -1,0 +1,21 @@
+.Toastify__toast-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.Toastify__toast {
+  display: flex;
+  align-items: center;
+}
+
+.Toastify__toast-body {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .Toastify__toast-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
