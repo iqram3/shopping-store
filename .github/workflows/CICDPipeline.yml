@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Specify the Node.js version to use
+          node-version: '20'
 
       - name: Cache npm dependencies
         uses: actions/cache@v3
@@ -33,14 +33,14 @@ jobs:
         run: npm install --save-dev @babel/plugin-proposal-private-property-in-object
 
       - name: Build Project
-        run: npm run build  # Ensure this command is working correctly
+        run: npm run build
 
       - name: Configure Git
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-          - name: Deploy to GitHub Pages
-          run: |
-            npm install -g gh-pages
-            gh-pages -d build -b gh-pages -r https://x-access-token:${{ secrets.CICD_TOKEN }}@github.com/${{ github.repository }}
+      - name: Deploy to GitHub Pages
+        run: |
+          npm install -g gh-pages
+          gh-pages -d build -b gh-pages -r https://x-access-token:${{ secrets.CICD_TOKEN }}@github.com/${{ github.repository }}
