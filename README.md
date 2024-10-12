@@ -66,7 +66,7 @@ Your app is ready to be deployed!
 See deployment documentation for more details.
 ```
 ### Project Structure
-
+.
 ├── public              # Static files
 ├── src
 │   ├── components      # Reusable UI components
