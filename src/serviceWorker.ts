@@ -26,7 +26,7 @@ const URLS_TO_CACHE = [
   "/index.html",
   "/static/js/bundle.js",
   "/manifest.json",
-  "https://fakestoreapi.com/products" // Add more URLs as needed
+  "https://fakestoreapi.com/products", // Add more URLs as needed
 ];
 
 // Installation Event: Cache assets
@@ -60,27 +60,30 @@ self.addEventListener("fetch", (event: Event) => {
 });
 // Register function to register the service worker
 export function register() {
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker
-          .register("/serviceWorker.js")
-          .then((registration) => {
-            console.log("Service Worker registered with scope:", registration.scope);
-          })
-          .catch((error) => {
-            console.error("Service Worker registration failed:", error);
-          });
-      });
-    }
-  }
-  
-  // Add unregister function for cleanup if needed
-  export function unregister() {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.ready.then((registration) => {
-        registration.unregister().then(() => {
-          console.log("Service Worker unregistered");
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("/shopping-store/serviceWorker.js")
+        .then((registration) => {
+          console.log(
+            "Service Worker registered with scope:",
+            registration.scope
+          );
+        })
+        .catch((error) => {
+          console.error("Service Worker registration failed:", error);
         });
-      });
-    }
+    });
   }
+}
+
+// Add unregister function for cleanup if needed
+export function unregister() {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.ready.then((registration) => {
+      registration.unregister().then(() => {
+        console.log("Service Worker unregistered");
+      });
+    });
+  }
+}
