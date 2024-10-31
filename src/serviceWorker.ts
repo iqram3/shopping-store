@@ -63,7 +63,7 @@ export function register() {
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
       navigator.serviceWorker
-        .register("/shopping-store/serviceWorker.js")
+        .register("/shopping-store/serviceWorker.ts")
         .then((registration) => {
           console.log(
             "Service Worker registered with scope:",
