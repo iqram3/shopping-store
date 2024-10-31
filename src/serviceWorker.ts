@@ -22,10 +22,10 @@ interface FetchEvent extends ExtendableEvent {
 
 const CACHE_NAME = "product-cache-v1";
 const URLS_TO_CACHE = [
-  "/",
-  "/index.html",
-  "/static/js/bundle.js",
-  "/manifest.json",
+  "/shopping-store/",
+  "/shopping-store/index.html",
+  "/shopping-store/static/js/main.1058b1b8.js",
+  "/shopping-store/static/css/main.614676ed.css",
   "https://fakestoreapi.com/products", // Add more URLs as needed
 ];
 
